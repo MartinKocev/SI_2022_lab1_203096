@@ -1,0 +1,171 @@
+LABORATORISKA 1 PO SOFTVERSKO INZINJERSTVO - MARTIN KOCEV(203096)
+KOMANDI ZA GIT:
+1. Креирав акаунт.
+
+2. imenuvana mi e master
+
+3. kreiran e remote repoziorium
+
+4. mkdir SI_LAB1_203096
+cd SI_LAB1_203096
+git init 
+git remote add origin  https://github.com/MartinKocev/SI_2022_lab1_203096.git
+git remote -v
+git clone  https://github.com/MartinKocev/SI_2022_lab1_203096.git
+cd SI_2022_lab1_203096
+git init 
+
+5.touch shopping_list.txt
+git add shopping_list.txt
+git commit -m "Add 5 items to the shopping list"
+
+6.git add shopping_list.txt
+git commit-m "Add quantities to the items"
+
+7.git checkout -b branch1
+git branch -> za da vidam dali uspesno mi se formirala grankata
+git checkout -b branch2 
+
+8. git log
+commit d1b3e3b9a8c1aa6656ba99d1d2288badddbbe013 (HEAD -> branch2, master, branch1)
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:17:37 2022 +0200
+
+    Add quantities to the items
+
+commit 0ee5b1fc14b9dc6c472ffa8ecb2f497b02196854
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:15:57 2022 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1ca4d5d8b5212b71614237f1377e4ce9beb514b0 (origin/master, origin/HEAD)
+Author: MartinKocev <100631774+MartinKocev@users.noreply.github.com>
+Date:   Wed Mar 30 10:10:26 2022 +0200
+
+    Initial commit
+9.git push --set-upstream origin branch2
+git checkout branch1
+git push origin branch1
+git checkout master
+git push
+10.git checkout branch1
+
+11.nano shopping_list.txt
+git add shopping_list.txt
+git commit -m "Change quantity of item #5"
+12.git checkout master
+
+13.
+nano shopping_list.txt
+git add shopping_list.txt
+git commit -m "Change quantity of item #2"
+
+14.
+git push origin master
+git checkout branch1
+git push origin branch1
+
+15.git checkout branch2
+
+16.nano shopping_list.txt
+git add shopping_list.txt
+git commit -m "Modify item #4"
+
+17.git log
+commit 82d631e7150be7572e53687c0fa2ee22006183bb (HEAD -> branch2)
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:47:19 2022 +0200
+
+    Modify item #4
+
+commit d1b3e3b9a8c1aa6656ba99d1d2288badddbbe013 (origin/branch2)
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:17:37 2022 +0200
+
+    Add quantities to the items
+
+commit 0ee5b1fc14b9dc6c472ffa8ecb2f497b02196854
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:15:57 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1ca4d5d8b5212b71614237f1377e4ce9beb514b0
+Author: MartinKocev <100631774+MartinKocev@users.noreply.github.com>
+Date:   Wed Mar 30 10:10:26 2022 +0200
+
+    Initial commit
+18.nano shopping_list.txt
+git add shopping_list.txt
+git commit --amend
+go menuvam commitot sega namesto modify item 4 sega ima i add item 6
+19. git log
+commit 2306cd9bc931798240412a0bfca006d86de937f5 (HEAD -> branch2)
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:49:34 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit d1b3e3b9a8c1aa6656ba99d1d2288badddbbe013 (origin/branch2)
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:17:37 2022 +0200
+
+    Add quantities to the items
+
+commit 0ee5b1fc14b9dc6c472ffa8ecb2f497b02196854
+Author: Martin <martin.kocev@students.finki.ukim>
+Date:   Wed Mar 30 10:15:57 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1ca4d5d8b5212b71614237f1377e4ce9beb514b0
+Author: MartinKocev <100631774+MartinKocev@users.noreply.github.com>
+Date:  Wed Mar 30 10:10:26 2022 +0200
+
+    Initial commit
+20.
+git checkout master
+git merge branch1
+
+21.git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Ovde se slucuva konflikt bidejki ne se isti branch2 i master i ode po recursive strategy
+G)
+$ git diff
+diff --cc shopping_list.txt
+index 4d6eaef,5fef000..0000000
+--- a/shopping_list.txt
++++ b/shopping_list.txt
+@@@ -1,5 -1,6 +1,11 @@@
+  1.salata x 1
+ -2.tikveska rakija x 3
+ +2.tikveska rakija x 4
+  3.sirenje x 1
+++<<<<<<< HEAD
+ +4.maslinki x 0.5
+- 5.ajvar x 5
+++5.ajvar x 5
+++=======
++ 4.kolbas x 0.5
++ 5.ajvar x 4
+ -6.jajce x 2
+++6.jajce x 2
+++>>>>>>> branch2
+za da se razrese konfilkt pravam
+edit na txt fajlot spored master
+ne gi prifakjam promenite na branch2
+git add shopping_list.txt
+git commit -m "Merge branch 'branch2'"
+
+22. touch 203096.txt
+gi vnesuvam site logovi i komandi
+git add 203096.txt
+git commit -m "Add docs"
+23.git push
+
+
+
+
