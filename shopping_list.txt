@@ -1,5 +1,5 @@
-1.salata
-2.tikveska rakija
-3.sirenje
-4.maslinki
-5.ajvar
+1.salata x 1
+2.tikveska rakija x 3
+3.sirenje x 1
+4.maslinki x 0.5
+5.ajvar x 4
